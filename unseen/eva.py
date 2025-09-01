@@ -1176,7 +1176,7 @@ def gev_return_curve(
         np.isfinite(boot_event_return_periods)
     ]
     event_return_period_lower_ci = np.quantile(boot_event_return_periods, q)
-    event_return_period_upper_ci = np.quantile(boot_event_return_periods, q - 1)
+    event_return_period_upper_ci = np.quantile(boot_event_return_periods, 1 - q)
     event_data = (
         event_return_period,
         event_return_period_lower_ci,
